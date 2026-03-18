@@ -6,6 +6,47 @@ class Node:
     def __repr__(self):
         return f'(DATA: {self.data} | NEXT: {self.next})'
     
+    songs = {
+    "node_n": {"title": "X Gon Give It To Ya", "artist": "DMX", "album": "The Definition of X"},
+    "node_o": {"title": "Jump Around", "artist": "House of Pain", "album": "House of Pain"},
+    "node_p": {"title": "HUMBLE", "artist": "Kendrick Lamar", "album": "DAMN"},
+    "node_q": {"title": "Sicko Mode", "artist": "Travis Scott", "album": "Astroworld"},
+    "node_r": {"title": "Industry Baby", "artist": "Lil Nas X", "album": "Montero"},
+    "node_s": {"title": "DNA", "artist": "Kendrick Lamar", "album": "DAMN"},
+    "node_t": {"title": "All the Way Up", "artist": "Fat Joe & Remy Ma", "album": "Plata O Plomo"},
+    "node_u": {"title": "Welcome to the Jungle", "artist": "Guns N Roses", "album": "Appetite for Destruction"},
+    "node_v": {"title": "Enter Sandman", "artist": "Metallica", "album": "Metallica"},
+    "node_w": {"title": "Centuries", "artist": "Fall Out Boy", "album": "American Beauty/American Psycho"},
+    "node_x": {"title": "My Songs Know What You Did in the Dark", "artist": "Fall Out Boy", "album": "Save Rock and Roll"},
+    "node_y": {"title": "Warriors", "artist": "Imagine Dragons", "album": "Smoke + Mirrors"},
+    "node_z": {"title": "Radioactive", "artist": "Imagine Dragons", "album": "Night Visions"},
+    "node_aa": {"title": "Titanium", "artist": "David Guetta", "album": "Nothing but the Beat"},
+    "node_ab": {"title": "Animals", "artist": "Martin Garrix", "album": "Gold Skies"},
+    "node_ac": {"title": "Levels", "artist": "Avicii", "album": "True"},
+    "node_ad": {"title": "Turn Down for What", "artist": "DJ Snake & Lil Jon", "album": "Encore"},
+    "node_ae": {"title": "Don’t Stop Me Now", "artist": "Queen", "album": "Jazz"},
+    "node_af": {"title": "We Are the Champions", "artist": "Queen", "album": "News of the World"},
+    "node_ag": {"title": "Born to Be Wild", "artist": "Steppenwolf", "album": "Steppenwolf"},
+    "node_ah": {"title": "Pump It", "artist": "Black Eyed Peas", "album": "Monkey Business"},
+    "node_ai": {"title": "Party Up", "artist": "DMX", "album": "...And Then There Was X"},
+    "node_aj": {"title": "Can’t Be Touched", "artist": "Roy Jones Jr", "album": "Body Head Bangerz"},
+    "node_ak": {"title": "Hall of Fame", "artist": "The Script", "album": "3"},
+    "node_al": {"title": "Unstoppable", "artist": "Sia", "album": "This Is Acting"},
+    "node_am": {"title": "Legends Never Die", "artist": "Against The Current", "album": "League of Legends"},
+    "node_an": {"title": "Enemy", "artist": "Imagine Dragons", "album": "Mercury Act 1"},
+    "node_ao": {"title": "Run This Town", "artist": "Jay-Z", "album": "The Blueprint 3"},
+    "node_ap": {"title": "Lose Control", "artist": "Missy Elliott", "album": "The Cookbook"},
+    "node_aq": {"title": "Dangerous", "artist": "David Guetta", "album": "Listen"},
+    "node_ar": {"title": "Firestarter", "artist": "The Prodigy", "album": "The Fat of the Land"},
+    "node_as": {"title": "Ready For It", "artist": "Taylor Swift", "album": "Reputation"},
+    "node_at": {"title": "All I Do Is Win", "artist": "DJ Khaled", "album": "Victory"},
+    "node_au": {"title": "Dreams and Nightmares", "artist": "Meek Mill", "album": "Dreams and Nightmares"},
+    "node_av": {"title": "Power Glove", "artist": "Knife Party", "album": "Abandon Ship"},
+    "node_aw": {"title": "Animals", "artist": "Nickelback", "album": "All the Right Reasons"},
+    "node_ax": {"title": "Remember the Name", "artist": "Fort Minor", "album": "The Rising Tied"}
+    }
+    
+    
 class linkedList:
     def __init__(self):
         self.start = None
@@ -13,8 +54,8 @@ class linkedList:
     def __repr__(self):
         nodes = ['START']
         for node in self:
-            nodes.append(node.data)
-        nodes.append('NIL')
+            nodes.append(node.nombre)
+        nodes.append('Fin de la playlist')
         return '\n' + ' --> '.join(nodes)
 
     def __iter__(self):
