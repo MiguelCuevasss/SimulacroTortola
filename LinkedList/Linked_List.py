@@ -1,16 +1,12 @@
-''' Custom Linked List implementation. '''
-
-
 class Node:
     def __init__(self, data: any):
         self.data = data
         self.next = None
 
     def __repr__(self):
-        return f'(DATA: {self.data} | NEXT: {self.next})' # TODO: En el futuro arreglar repr para mostrar solo la data, error cuando next es None 
-
-
-class LinkedList:
+        return f'(DATA: {self.data} | NEXT: {self.next})'
+    
+class linkedList:
     def __init__(self):
         self.start = None
 
@@ -40,17 +36,3 @@ class LinkedList:
     def insert_at_beginning(self, element: Node):
         element.next = self.start
         self.start = element
-
-    def insert_at_end(self, element: Node):
-        pass
-
-    def insert_after_node(self, element: Node, node_reference: any):
-        pass
-    
-    def delete_node(self, element_data: any):
-        # Deletes the first node with matching data
-        pass
-
-    def search(self, element_data: any):
-        # Returns the first node with matching data
-        pass
